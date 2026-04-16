@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="weekly.xsl"?>
+<timetable year="2025" semester="Fall">
+
+  <!-- ── Schedule structure ── -->
+  <config>
+    <days>
+      <day>Monday</day>
+      <day>Tuesday</day>
+      <day>Wednesday</day>
+      <day>Thursday</day>
+      <day>Friday</day>
+    </days>
+    <slots>
+      <slot time="08:00"/>
+      <slot time="09:00"/>
+      <slot time="10:00"/>
+      <slot time="11:00"/>
+      <slot time="12:00"/>
+      <slot time="13:00"/>
+      <slot time="14:00"/>
+      <slot time="15:00"/>
+      <slot time="16:00"/>
+      <slot time="17:00"/>
+    </slots>
+  </config>
+
+  <!-- ── Master lists (define once, reference by id) ── -->
+  <subjects>
+    <subject id="CS101"   name="Intro to Programming" color="#4A90D9"/>
+    <subject id="CS201"   name="Data Structures"      color="#7B68EE"/>
+    <subject id="MATH101" name="Calculus I"           color="#E74C3C"/>
+    <subject id="MATH201" name="Linear Algebra"       color="#E67E22"/>
+    <subject id="PHY101"  name="Physics I"            color="#2ECC71"/>
+    <subject id="ENG101"  name="Academic Writing"     color="#F39C12"/>
+  </subjects>
+
+  <rooms>
+    <room id="A101" name="Lab A"         capacity="30"/>
+    <room id="B202" name="Lecture Hall B" capacity="120"/>
+    <room id="C303" name="Room C"        capacity="50"/>
+    <room id="D404" name="Lab D"         capacity="25"/>
+  </rooms>
+
+  <professors>
+    <professor id="P1" name="Dr. Smith"/>
+    <professor id="P2" name="Prof. Johnson"/>
+    <professor id="P3" name="Dr. Williams"/>
+    <professor id="P4" name="Prof. Davis"/>
+    <professor id="P5" name="Dr. Brown"/>
+  </professors>
+
+  <!-- ── Sessions ── -->
+  <sessions>
+    <!-- Monday -->
+    <session>
+      <day>Monday</day><start>09:00</start><end>10:30</end>
+      <subjectRef>CS101</subjectRef><roomRef>A101</roomRef><professorRef>P1</professorRef>
+    </session>
+    <session>
+      <day>Monday</day><start>11:00</start><end>12:30</end>
+      <subjectRef>MATH201</subjectRef><roomRef>B202</roomRef><professorRef>P2</professorRef>
+    </session>
+    <session>
+      <day>Monday</day><start>14:00</start><end>15:30</end>
+      <subjectRef>PHY101</subjectRef><roomRef>C303</roomRef><professorRef>P3</professorRef>
+    </session>
+
+    <!-- Tuesday -->
+    <session>
+      <day>Tuesday</day><start>08:00</start><end>09:30</end>
+      <subjectRef>ENG101</subjectRef><roomRef>C303</roomRef><professorRef>P4</professorRef>
+    </session>
+    <session>
+      <day>Tuesday</day><start>10:00</start><end>11:30</end>
+      <subjectRef>CS201</subjectRef><roomRef>A101</roomRef><professorRef>P1</professorRef>
+    </session>
+    <session>
+      <day>Tuesday</day><start>13:00</start><end>14:30</end>
+      <subjectRef>MATH101</subjectRef><roomRef>B202</roomRef><professorRef>P5</professorRef>
+    </session>
+
+    <!-- Wednesday -->
+    <session>
+      <day>Wednesday</day><start>09:00</start><end>10:30</end>
+      <subjectRef>CS101</subjectRef><roomRef>A101</roomRef><professorRef>P1</professorRef>
+    </session>
+    <session>
+      <day>Wednesday</day><start>11:00</start><end>12:30</end>
+      <subjectRef>PHY101</subjectRef><roomRef>C303</roomRef><professorRef>P3</professorRef>
+    </session>
+    <session>
+      <day>Wednesday</day><start>14:00</start><end>16:00</end>
+      <subjectRef>CS201</subjectRef><roomRef>D404</roomRef><professorRef>P1</professorRef>
+    </session>
+
+    <!-- Thursday -->
+    <session>
+      <day>Thursday</day><start>08:00</start><end>09:30</end>
+      <subjectRef>ENG101</subjectRef><roomRef>C303</roomRef><professorRef>P4</professorRef>
+    </session>
+    <session>
+      <day>Thursday</day><start>10:00</start><end>11:30</end>
+      <subjectRef>MATH201</subjectRef><roomRef>B202</roomRef><professorRef>P2</professorRef>
+    </session>
+    <session>
+      <day>Thursday</day><start>13:00</start><end>14:30</end>
+      <subjectRef>MATH101</subjectRef><roomRef>B202</roomRef><professorRef>P5</professorRef>
+    </session>
+
+    <!-- Friday -->
+    <session>
+      <day>Friday</day><start>09:00</start><end>10:30</end>
+      <subjectRef>CS101</subjectRef><roomRef>A101</roomRef><professorRef>P1</professorRef>
+    </session>
+    <session>
+      <day>Friday</day><start>11:00</start><end>12:30</end>
+      <subjectRef>PHY101</subjectRef><roomRef>C303</roomRef><professorRef>P3</professorRef>
+    </session>
+    <session>
+      <day>Friday</day><start>14:00</start><end>15:30</end>
+      <subjectRef>MATH101</subjectRef><roomRef>B202</roomRef><professorRef>P5</professorRef>
+    </session>
+  </sessions>
+
+</timetable>
